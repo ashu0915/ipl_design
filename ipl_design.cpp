@@ -77,13 +77,7 @@ class Teams{
             cout<<endl<<endl;
         }
     public:
-        ~Teams()
-        {
-            for(auto& it: players_list)
-            {
-                delete it;
-            }
-        }
+        ~Teams()=default;
 };
 
 class Match
@@ -314,11 +308,7 @@ class Match
         }
 
     public:
-        ~Match()
-        {
-            delete team1;
-            delete team2;
-        }
+        ~Match()=default;
 };
 
 class IPL{
@@ -430,6 +420,7 @@ int main()
 
     ipl.printTeamDetails();
     ipl.playMatch(1,"RCB","mi");
+    ipl.playMatch(2,"RCB","mi");
     ipl.printMatchDetails(1);
     ipl.printTeamDetails();
     ipl.printPlayerCareerDetails();
